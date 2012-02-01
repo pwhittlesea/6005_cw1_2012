@@ -18,8 +18,3 @@ Basic Coursework Specification:
   * The package MUST install on the latest ubuntu LTS release with a dpkg -i command.
   * The LTS install used will be the desktop version with no optional software installed!
   * The code MUST be installed in an appriate place in the operating system, e.g. /usr/share/freader
-
-
-TODO:
-  * Allow per-user config
-  * Manual
