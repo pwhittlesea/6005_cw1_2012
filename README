@@ -8,9 +8,20 @@ This is part of a coursework for Students on the INFO6005 course at the Universi
 In this course students are expected to package some code for distribution on the debian/ubuntu platform
 
 Usage:
-    php index.php --help (for help)
+       freader [--feeds feed1[,feed2,...] --items n]
 
-This library can either read from a config file, or from stdin. 
+Options:
+       --feeds feed1[,feed2,...]
+              list of feeds to parse
+
+       --items n
+              number of elements to parse from each feed
+
+Files:
+       /etc/freader/global.conf
+              Global system wide configuration file.
+       $HOME/.freader
+              Local system configuration file.
 
 Basic Coursework Specification:
   * Student MUST use an appropiate source code control repository for managing both the exemplar code and other related resources. 
