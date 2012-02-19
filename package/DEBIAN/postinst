@@ -11,7 +11,8 @@ num="$RET"
 
 conf="`cat /etc/cw1-6005-pw6g08/global.conf`"
 echo "$conf" | 
-sed "s#GLOBALFEED#${feed}#g" | 
-sed "s#GLOBALNUM#${num}#g" > /etc/cw1-6005-pw6g08/global.conf
+awk -v pat="$feed" '/^<feeds>/{p=1;print;print pat}/<\/feeds>/{p=0}!p' |
+awk -v pat="$num" '/^<items>/{p=1;print;print pat}/<\/items>/{p=0}!p' > /etc/cw1-6005-pw6g08/global.conf
+
 
 db_stop

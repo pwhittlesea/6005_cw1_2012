@@ -8,7 +8,7 @@ This is part of a coursework for Students on the INFO6005 course at the Universi
 In this course students are expected to package some code for distribution on the debian/ubuntu platform
 
 Usage:
-       freader [--feeds feed1[,feed2,...] --items n]
+       cw1-6005-pw6g08 [--feeds feed1[,feed2,...] --items n]
 
 Options:
        --feeds feed1[,feed2,...]
@@ -18,12 +18,12 @@ Options:
               number of elements to parse from each feed
 
 Files:
-       /etc/freader/global.conf
+       /etc/cw1-6005-pw6g08/global.conf
               Global system wide configuration file.
-       $HOME/.freader
+       $HOME/.cw1-6005-pw6g08
               Local system configuration file.
 
 Implemented Features:
   * Command line tool - exectuable placed in /usr/bin
   * Global configuration
-  * User configuration - overrides global config (~/.freader)
+  * User configuration - overrides global config (~/.cw1-6005-pw6g08)
