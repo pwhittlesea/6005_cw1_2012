@@ -27,3 +27,4 @@ Implemented Features:
   * Command line tool - exectuable placed in /usr/bin
   * Global configuration
   * User configuration - overrides global config (~/.cw1-6005-pw6g08)
+  * Deb conf configuration on install
