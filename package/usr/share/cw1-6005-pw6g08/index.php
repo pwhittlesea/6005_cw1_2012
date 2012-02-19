@@ -46,8 +46,8 @@
 
 	# Read config from file
 	if (@!$config) {
-		$user_config_file = $_SERVER['HOME'].'/.freader';
-		$glob_config_file = '/etc/freader/global.conf';
+		$user_config_file = $_SERVER['HOME'].'/.cw1-6005-pw6g08';
+		$glob_config_file = '/etc/cw1-6005-pw6g08/global.conf';
 		if (file_exists($user_config_file)) {
 			$config = conf_from_file($user_config_file);
 		} else if (file_exists($glob_config_file)) {

@@ -1,4 +1,4 @@
-Package: freader
+Package: cw1-6005-pw6g08
 Version: 1.1
 Section: web
 Priority: optional
@@ -6,5 +6,5 @@ Architecture: all
 Depends: debconf, php5 (>= 5)
 Maintainer: Phillip Whittlesea <pw.github@thega.me.uk>
 Description: RSS Reader written in PHP
- freader is a feed reader written for the INFO6005 module
+ cw1-6005-pw6g08 is a feed reader written for the INFO6005 module
  ran by the University of Southampton

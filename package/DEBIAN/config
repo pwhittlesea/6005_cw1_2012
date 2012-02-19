@@ -4,8 +4,8 @@
 . /usr/share/debconf/confmodule
 
 # Ask for feed
-db_input critical freader/location || true
+db_input critical cw1-6005-pw6g08/location || true
 
 # Ask for number of elements
-db_input critical freader/number || true
+db_input critical cw1-6005-pw6g08/number || true
 db_go

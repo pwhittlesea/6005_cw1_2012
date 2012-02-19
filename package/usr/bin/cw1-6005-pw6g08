@@ -1,9 +1,9 @@
 #!/bin/bash
 # Created: 31/01/2012
-# Wrapper script for freader PHP
+# Wrapper script for cw1-6005-pw6g08 PHP
 
 #So PHP may not be where we want, so lets find her
 PHP=`which php`
 
 #Pass all of the arguments to the PHP script
-$PHP /usr/share/freader/index.php $@
+$PHP /usr/share/cw1-6005-pw6g08/index.php $@

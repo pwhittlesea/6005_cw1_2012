@@ -1,10 +1,10 @@
-Template: freader/location
+Template: cw1-6005-pw6g08/location
 Type: string
 Default: http://feeds.bbci.co.uk/news/rss.xml
 Description: Feed Location:
  This package requires the location of a feed for the global configuration.
 
-Template: freader/number
+Template: cw1-6005-pw6g08/number
 Type: string
 Default: 10
 Description: Number of Feed Entries:

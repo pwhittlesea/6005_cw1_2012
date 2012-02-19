@@ -1,7 +1,7 @@
-05f710de28cc681eb7ca5b35d87eae64  ./usr/share/freader/index.php
-79469f4f49ec97ec2aa0f24485f0f440  ./usr/share/freader/rss_php.php
-4daf7b6632a690e85b3d34468d78208b  ./usr/share/doc/freader/copyright
-597a29704309feab869765ff74138dc9  ./usr/share/doc/freader/changelog.gz
-3f29e2bc5d0b5aa0c7de113807bfbe69  ./usr/share/man/man8/freader.8.gz
-96388ad04af8485f8336b0c6225ef3c8  ./usr/bin/freader
-e999accf9326894e3f1d8e8e957e374a  ./etc/freader/global.conf
+d4951d4809dd4ec4c712f226eefaa619  ./usr/share/doc/cw1-6005-pw6g08/copyright
+f6fd0847b505326964e677d15f50c398  ./usr/share/doc/cw1-6005-pw6g08/changelog.gz
+7d7edf9ce1b1bce247438583c1e455ee  ./usr/share/man/man8/cw1-6005-pw6g08.8.gz
+fdc7d18d1c0cf70c2ae1f64c893ac93b  ./usr/share/cw1-6005-pw6g08/index.php
+79469f4f49ec97ec2aa0f24485f0f440  ./usr/share/cw1-6005-pw6g08/rss_php.php
+522616ec7f17ddc270bfb5c74933b224  ./usr/bin/cw1-6005-pw6g08
+0b83db104e666a93cb9295e479bc680a  ./etc/cw1-6005-pw6g08/global.conf

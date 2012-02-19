@@ -4,14 +4,14 @@ set -e
 # Source debconf library.
 . /usr/share/debconf/confmodule
 
-db_get freader/location
+db_get cw1-6005-pw6g08/location
 feed="$RET"
-db_get freader/number
+db_get cw1-6005-pw6g08/number
 num="$RET"
 
-conf="`cat /etc/freader/global.conf`"
+conf="`cat /etc/cw1-6005-pw6g08/global.conf`"
 echo "$conf" | 
 sed "s#GLOBALFEED#${feed}#g" | 
-sed "s#GLOBALNUM#${num}#g" > /etc/freader/global.conf
+sed "s#GLOBALNUM#${num}#g" > /etc/cw1-6005-pw6g08/global.conf
 
 db_stop
