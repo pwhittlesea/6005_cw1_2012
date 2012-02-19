@@ -1,9 +1,9 @@
 Package: freader
-Version: 1.0
+Version: 1.1
 Section: web
 Priority: optional
 Architecture: all
-Depends: php5 (>= 5)
+Depends: debconf, php5 (>= 5)
 Maintainer: Phillip Whittlesea <pw.github@thega.me.uk>
 Description: RSS Reader written in PHP
  freader is a feed reader written for the INFO6005 module

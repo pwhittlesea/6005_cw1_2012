@@ -1,0 +1,11 @@
+#!/bin/sh -e
+
+# Source debconf library.
+. /usr/share/debconf/confmodule
+
+# Ask for feed
+db_input critical freader/location || true
+
+# Ask for number of elements
+db_input critical freader/number || true
+db_go

@@ -1,0 +1,17 @@
+#!/bin/sh
+set -e
+
+# Source debconf library.
+. /usr/share/debconf/confmodule
+
+db_get freader/location
+feed="$RET"
+db_get freader/number
+num="$RET"
+
+conf="`cat /etc/freader/global.conf`"
+echo "$conf" | 
+sed "s#GLOBALFEED#${feed}#g" | 
+sed "s#GLOBALNUM#${num}#g" > /etc/freader/global.conf
+
+db_stop

@@ -1,0 +1,11 @@
+Template: freader/location
+Type: string
+Default: http://feeds.bbci.co.uk/news/rss.xml
+Description: Feed Location:
+ This package requires the location of a feed for the global configuration.
+
+Template: freader/number
+Type: string
+Default: 10
+Description: Number of Feed Entries:
+ This package requires the number of entries you would like to fetch from the global feed.
