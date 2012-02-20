@@ -40,15 +40,17 @@
 */
 
 	# Read config from STDIN
-	if ($argc > 1) {
+	if (isset($argc) && $argc > 1) {
 		$config = parse_args($argv);
 	}
 
 	# Read config from file
 	if (@!$config) {
-		$user_config_file = $_SERVER['HOME'].'/.cw1-6005-pw6g08';
+		$user_config_file = null;
+		if (isset($_SERVER['HOME']))
+		    $user_config_file = $_SERVER['HOME'].'/.cw1-6005-pw6g08';
 		$glob_config_file = '/etc/cw1-6005-pw6g08/global.conf';
-		if (file_exists($user_config_file)) {
+		if (isset($user_config_file) && file_exists($user_config_file)) {
 			$config = conf_from_file($user_config_file);
 		} else if (file_exists($glob_config_file)) {
 			$config = conf_from_file($glob_config_file);
@@ -77,6 +79,8 @@
 		# GOT THE FEEDS, PROCESS AND OUTPUT
 		require_once('rss_php.php');
 
+		$isshell = (isset($_SERVER['SHELL'])) ? true : false;
+
 		$rss = new rss_php;
 
 		# SET DEFAULT ITEM COUNT, IN CASE ONE NOT SPECIFIED
@@ -96,6 +100,7 @@
 			$items = $rss->getItems();
 		
 			echo "Items From $url \n";
+			if (!$isshell) echo " <br/>"; 
 			echo "===========";
 			for ($j=0;$j<strlen($url);$j++) {
 				echo "=";
@@ -110,6 +115,7 @@
 				
 					if ($items[$k]) {
 	
+						if (!$isshell) echo " <br/>"; 
 						echo " * " . $items[$k]["title"] . "\n";
 
 					}			
