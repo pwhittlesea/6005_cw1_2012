@@ -1,0 +1,66 @@
+#!/usr/bin/make -f
+# Sample debian/rules that uses debhelper. 
+# This file is public domain software, originally written by Joey Hess.
+#
+# This version is for packages that are architecture independent.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+script = $(CURDIR)/usr/bin/cw1-6005-pw6g08
+conf = $(CURDIR)/etc/cw1-6005-pw6g08/global.conf
+indexphp = $(CURDIR)/usr/share/cw1-6005-pw6g08/index.php
+rssphp = $(CURDIR)/usr/share/cw1-6005-pw6g08/rss_php.php
+
+DEST1 = $(CURDIR)/debian/cw1-6005-pw6g08/usr/share/cw1-6005-pw6g08
+DEST2 = $(CURDIR)/debian/cw1-6005-pw6g08/usr/bin
+DEST3 = $(CURDIR)/debian/cw1-6005-pw6g08/etc/cw1-6005-pw6g08
+
+build: build-stamp
+build-stamp:
+	dh_testdir
+	touch build-stamp
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp
+	dh_clean
+
+install: build clean $(script) $(conf) $(indexphp) $(rssphp)
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_installdirs
+
+	mkdir -m 755 -p $(DEST1)
+	mkdir -m 755 -p $(DEST2)
+	mkdir -m 755 -p $(DEST3)
+
+	install -m 644 $(indexphp) $(DEST1)
+	install -m 644 $(rssphp) $(DEST1)
+	install -m 755 $(script) $(DEST2)
+	install -m 644 $(conf) $(DEST3)
+
+# Build architecture-independent files here.
+binary-indep: build install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs
+	dh_installdocs
+	dh_installexamples
+	dh_installdebconf
+	dh_installman
+	dh_link
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+# Build architecture-dependent files here.
+binary-arch: build install
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install

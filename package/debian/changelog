@@ -1,0 +1,41 @@
+cw1-6005-pw6g08 (1.3) stable; urgency=low
+  * Changed dependency to php5-cli from php5
+  * Made script web suitable
+ -- phillip whittlesea <pw.github@thega.me.uk>  Mon, 20 Feb 2012 13:18:00 -0000
+
+cw1-6005-pw6g08 (1.2) stable; urgency=low
+  * package name changed freader -> cw1-6005-pw6g08
+  * Updated postinst script to be reconfigure compatible
+ -- phillip whittlesea <pw.github@thega.me.uk>  Sun, 19 Feb 2012 23:15:00 -0000
+
+freader (1.1) stable; urgency=low
+  * debconf dependency
+  * debconf request for Feed Url 
+  * debconf request for number of elements
+ -- phillip whittlesea <pw.github@thega.me.uk>  Sun, 19 Feb 2012 18:22:00 -0000
+
+freader (1.0) stable; urgency=low
+  * Added md5sums files for package
+  * Cleaned global config file 
+  * Package is stable
+ -- phillip whittlesea <pw.github@thega.me.uk>  Wed, 1 Feb 2012 14:56:00 -0000
+
+freader (0.4) unstable; urgency=low
+  * Added user config in HOME/.freader
+  * Modified index.php to check for presence of config and fallback to global.
+  * Modified man page to include file detailing.
+ -- phillip whittlesea <pw.github@thega.me.uk>  Wed, 1 Feb 2012 14:16:00 -0000
+
+freader (0.3) unstable; urgency=low
+  * Global configuration file added in /etc/freader/.
+ -- phillip whittlesea <pw.github@thega.me.uk>  Tue, 31 Jan 2012 18:17:00 -0000
+
+freader (0.2) unstable; urgency=low
+  * Added binary script in /usr/bin/.
+  * Added man page for freader.
+  * Removed requirement for i386 platform.
+ -- phillip whittlesea <pw.github@thega.me.uk>  Tue, 31 Jan 2012 17:47:00 -0000
+
+freader (0.1) unstable; urgency=low
+  * Creation.
+ -- phillip whittlesea <pw.github@thega.me.uk>  Tue, 31 Jan 2012 12:00:00 -0000

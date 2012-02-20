@@ -1,0 +1,36 @@
+.\" This manpage is copyright (C) 2012 Phillip Whittlesea <pw.github@thega.me.uk>.
+.\" 
+.\" This is free software; you may redistribute it and/or modify
+.\" it under the terms of the GNU General Public License as
+.\" published by the Free Software Foundation; either version 2,
+.\" or (at your option) any later version.
+.\"
+.\" This is distributed in the hope that it will be useful, but
+.\" WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+.\" GNU General Public License for more details.
+.\"
+.TH cw1-6005-pw6g08 7 "31 January 2012" "Debian GNU/Linux"
+.SH NAME
+cw1-6005-pw6g08 \- Wrapper for /usr/share/cw1-6005-pw6g08/index.php
+.SH SYNOPSIS
+.B cw1-6005-pw6g08 [--feeds feed1[,feed2,...] --items n]
+.SH DESCRIPTION
+This script will pass all calls to the PHP feed reader located in
+/usr/share/cw1-6005-pw6g08/
+.SH OPTIONS
+.IP "--feeds feed1[,feed2,...]"
+list of feeds to parse
+.IP "--items n"
+number of elements to parse from each feed
+.SH FILES
+.I /etc/cw1-6005-pw6g08/global.conf
+.RS
+Global system wide configuration file.
+.RE
+.I $HOME/.cw1-6005-pw6g08
+.RS
+Local system configuration file.
+.RE
+.SH AUTHOR
+cw1-6005-pw6g08 was written by Phillip Whittlesea <pw.github@thega.me.uk>.
